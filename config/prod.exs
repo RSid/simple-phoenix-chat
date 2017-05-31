@@ -14,7 +14,10 @@ use Mix.Config
 config :phoenix_chat, PhoenixChat.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/manifest.json"
+  cache_static_manifest: "priv/static/manifest.json",
+  server: true,
+  root: ".",
+  version: Mix.Project.config[:version]
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -58,4 +61,12 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+
+config :phoenix_chat, PhoenixChat.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
+  password: "buildium0809",
+  database: "phoenix_chat_dev",
+  hostname: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  ssl: true
