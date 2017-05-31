@@ -3,7 +3,7 @@
 cd /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive
 
 ### Update these values for your own S3 bucket ###
-SECRETS_S3_BUCKET=webstackwiths3-secretsbucket-1pk4172chs72h
+SECRETS_S3_BUCKET=alla-elixir-chat-app-secretsbucket-1h1z299a0w45
 S3_BUCKET_REGION=us-east-1
 ### Don't update below this line ###
 
