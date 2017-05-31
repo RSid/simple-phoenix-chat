@@ -17,6 +17,7 @@ config :phoenix_chat, PhoenixChat.Endpoint,
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
   root: ".",
+  check_origin: false,
   version: Mix.Project.config[:version]
 
 # Do not print debug messages in production
