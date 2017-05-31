@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :phoenix_chat, PhoenixChat.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: {:system, "PORT"}],
+  url: [host: "alla-LoadB-1NQJ8JDM1VU55-789972898.us-east-1.elb.amazonaws.com", port: {:system, "PORT"}],
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
   root: ".",
