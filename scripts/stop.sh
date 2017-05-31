@@ -3,5 +3,5 @@ cd /var/app/current
 
 if [ -e ./bin/phoenix ]
 then
-  ./bin/alla-elixir-chat-app- stop
+  ./bin/phoenix_chat stop
 fi
